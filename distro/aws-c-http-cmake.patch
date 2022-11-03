@@ -1,0 +1,21 @@
+diff -urN aws-c-http-0.6.8-orig/CMakeLists.txt aws-c-http-0.6.8/CMakeLists.txt
+--- aws-c-http-0.6.8-orig/CMakeLists.txt	2021-10-15 20:44:19.000000000 +0000
++++ aws-c-http-0.6.8/CMakeLists.txt	2022-02-03 20:54:23.824939167 +0000
+@@ -83,7 +83,7 @@
+ endif()
+ 
+ install(EXPORT "${PROJECT_NAME}-targets"
+-        DESTINATION "${LIBRARY_DIRECTORY}/${PROJECT_NAME}/cmake/${TARGET_DIR}/"
++        DESTINATION "${LIBRARY_DIRECTORY}/cmake/${PROJECT_NAME}/${TARGET_DIR}/"
+         NAMESPACE AWS::
+         COMPONENT Development)
+ 
+@@ -92,7 +92,7 @@
+         @ONLY)
+ 
+ install(FILES "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}-config.cmake"
+-        DESTINATION "${LIBRARY_DIRECTORY}/${PROJECT_NAME}/cmake/"
++        DESTINATION "${LIBRARY_DIRECTORY}/cmake/${PROJECT_NAME}/"
+         COMPONENT Development)
+ 
+ include(CTest)
